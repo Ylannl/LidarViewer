@@ -200,16 +200,16 @@ void loadPointFileLas(PointAccumulator& pa,const char* fileName,unsigned int cla
 			file->skip<double>(1);
 		
 		PointAccumulator::Color c;
-		if(false)//(pointDataFormat>=2) // -- HACK to force reading intensity
+		if(pointDataFormat>=2)
 			{
 			/* Assign point color from stored RGB data: */
 			unsigned short rgb[3];
 			file->read(rgb,3);
 			for(int j=0;j<3;++j)
 				c[j]=float(rgb[j]);
-			}
-		else
-			{
+		// 	}
+		// else
+		// 	{
 			/* Assign point color from intensity: */
 			for(int j=0;j<3;++j)
 				c[j]=float(intensity);
