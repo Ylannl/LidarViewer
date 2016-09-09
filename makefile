@@ -117,7 +117,6 @@ LIDARPREPROCESSOR_SOURCES = SplitPoints.cpp \
                             PointAccumulator.cpp \
                             LidarProcessOctree.cpp \
                             LidarOctreeCreator.cpp \
-                            ValueSource.cpp \
                             ReadPlyFile.cpp \
                             LidarPreprocessor.cpp
 
